@@ -138,37 +138,4 @@ However, the AI agent itself works correctly in a Jupyter notebook environment w
 
 So the core functionality of the project (ReAct agent + tools + reasoning) runs successfully, even though the Streamlit UI layer was not fully stable on my device.
 
-Common Issues
-JSONDecodeError
 
-Cause:
-Wikipedia API returned invalid or empty JSON.
-
-Fix:
-
-handle_parsing_errors=True
-OutputParserException
-
-Cause:
-The LLM returned invalid ReAct formatting.
-
-Fix:
-Use the official ReAct prompt:
-
-prompt = hub.pull("hwchase17/react")
-Ollama Connection Error
-could not connect to ollama server
-
-Fix:
-
-ollama serve
-Future Improvements
-Add Arxiv research tool
-Add PDF document Q&A
-Add vector database memory
-Add multi-agent workflows
-Add voice assistant support
-Add autonomous planning
-Author
-
-Built with LangChain + Ollama + Llama 3
